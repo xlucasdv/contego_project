@@ -19,5 +19,5 @@ Plataforma web para consulta de indicadores de ameaça (IP, domínio e hash) em 
 1. Clone e entre na pasta:
 
 ```bash
-git clone https://github.com/xlucasdv/contego_project.git
+git clone https://github.com/xlucasdv/contego_project
 cd contego_project
