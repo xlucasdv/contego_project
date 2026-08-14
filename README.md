@@ -1,4 +1,3 @@
-@'
 # Contego Threat Dashboard
 
 Plataforma web para consulta de indicadores de ameaça (IP, domínio e hash) em fontes de threat intelligence, com dashboard e histórico local.
