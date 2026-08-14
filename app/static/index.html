@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contego Threat Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contego Threat Dashboard</h1>
+    <p>
+      Consulta de reputação de IP, domínio e hash em fontes de inteligência de ameaças.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <form id="lookup-form">
+        <label for="value">Indicador</label>
+        <input
+          id="value"
+          name="value"
+          placeholder="Ex.: 8.8.8.8, example.com, 275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f"
+          required
+        >
+
+        <label for="provider">Fonte</label>
+        <select id="provider" name="provider">
+          <option value="otx">AlienVault OTX</option>
+          <option value="virustotal">VirusTotal</option>
+        </select>
+
+        <button type="submit">Consultar</button>
+      </form>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section id="result-section" class="card hidden">
+      <h2>Resultado</h2>
+      <div id="result"></div>
+    </section>
+
+    <section class="card">
+      <div class="history-header">
+        <h2>Histórico</h2>
+        <button id="refresh-history" type="button">Atualizar</button>
+      </div>
+
+      <table id="history-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Indicador</th>
+            <th>Tipo</th>
+            <th>Fonte</th>
+            <th>Status</th>
+            <th>Risco</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
